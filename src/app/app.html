@@ -1,10 +1,12 @@
 <h1>Directorio de personas</h1>
 <br>
 <div class="personas-grid">
-  <article class="card" *ngFor="let p of personaArray; index as i">
+  <article class="card" *ngFor="let p of personaArray; index as i" (click)="onSelect(p)" [class.selected]="selectedPersona === p">
     <img [src]="p.getRuta()" alt="{{ p.nombre }} {{ p.apellidos }}" loading="lazy" decoding="async">
     <h3 class="nombre">{{ p.nombre }}</h3>
     <p class="apellidos">{{ p.apellidos }}</p>
+    <p class="direccion">{{ p.getDireccion() }}</p>
+    <p class="telefono">{{ p.getTelefono() }}</p>
     <hr class="divider">
     <p class="edad">{{ p.edad }} años</p>
   </article>
@@ -19,6 +21,23 @@
 
   <div *ngIf="submitted" class="info-panel">
     <h3>Datos del usuario</h3>
+    <ng-container *ngIf="selectedPersona as sp; else sinSeleccion">
+      <div class="info-content">
+        <img [src]="sp.getRuta()" alt="{{ sp.nombre }} {{ sp.apellidos }}" class="info-avatar">
+        <div class="info-name">{{ sp.nombre }} {{ sp.apellidos }}</div>
+        <div class="info-grid">
+          <div class="info-label">Edad</div>
+          <div class="info-value">{{ sp.edad }} años</div>
+          <div class="info-label">Dirección</div>
+          <div class="info-value">{{ sp.getDireccion() }}</div>
+          <div class="info-label">Teléfono</div>
+          <div class="info-value">{{ sp.getTelefono() }}</div>
+        </div>
+      </div>
+    </ng-container>
+    <ng-template #sinSeleccion>
+      <p>Elige una tarjeta para ver sus detalles.</p>
+    </ng-template>
   </div>
 </section>
 
