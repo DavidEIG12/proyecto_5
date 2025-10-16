@@ -1,4 +1,87 @@
 :host {
+  display: block;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: linear-gradient(135deg, #f5f8fc, #e8eef7);
+  min-height: 100dvh;
+  padding: 2rem 1rem 3rem;
+  box-sizing: border-box;
+}
+
+h1 {
+  margin: 0 0 1.25rem;
+  color: #0d3b66;
+  font-weight: 800;
+  font-size: 2rem;
+  text-align: center;
+  letter-spacing: .3px;
+}
+
+h2 {
+  margin: 0 0 1.25rem;
+  color: #0d3b66;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: .3px;
+}
+
+/* Grid de tarjetas */
+.personas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+  align-items: stretch;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #e3e7ee;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(24, 39, 75, 0.06);
+  padding: .85rem;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(24, 39, 75, 0.12);
+}
+
+.card img {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* mantiene cuadrado */
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid #e9edf3;
+  background: #f1f4f8;
+}
+
+.card .nombre {
+  margin: .25rem 0 0;
+  font-weight: 600;
+  color: #1d3557;
+}
+
+.card .apellidos {
+  margin: 0;
+  color: #3a4a5e;
+}
+
+.card .edad {
+  margin: .25rem 0 0;
+  font-size: .9rem;
+  color: #4f5d75;
+}
+
+.divider {
+  height: 1px;
+  background: #e6ebf2;
+  margin: .4rem 0 .2rem;
+  border: none;
+}
+:host {
     --bright-blue: oklch(51.01% 0.274 263.83);
     --electric-violet: oklch(53.18% 0.28 296.97);
     --french-violet: oklch(47.66% 0.246 305.88);

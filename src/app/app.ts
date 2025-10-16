@@ -11,6 +11,7 @@ import { CommonModule } from '@angular/common';
 })
 export class App {
   protected readonly title = signal ('proyecto_5');
+  submitted: boolean = false;
 
   //  persona: Persona = new Persona ('David', 'García', 21);
 
@@ -19,4 +20,8 @@ export class App {
     new Persona ('Ana', 'descarga2.png', 'López', 22),
     new Persona ('María', 'descarga3.png', 'Martínez', 20)
    ]
+
+   onSubmit() {
+    this.submitted = !this.submitted;
+   }
 }

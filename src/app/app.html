@@ -1,9 +1,148 @@
-<h2>Lista de Personas</h2>
-<div *ngFor="let p of personaArray">
-  <img [src]="p.getRuta()" width="300px" height="300px">
-  <p>{{p.nombre}}</p>
-  <p>{{p.apellidos}}</p>
-  <p>{{p.edad}}</p>
-  <hr>
+<h1>Directorio de personas</h1>
+<br><br>
+<div class="personas-grid">
+  <article class="card" *ngFor="let p of personaArray; index as i">
+    <img [src]="p.getRuta()" alt="{{ p.nombre }} {{ p.apellidos }}" loading="lazy" decoding="async">
+    <h3 class="nombre">{{ p.nombre }}</h3>
+    <p class="apellidos">{{ p.apellidos }}</p>
+    <hr class="divider">
+    <p class="edad">{{ p.edad }} años</p>
+  </article>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 </div>
 <router-outlet />
