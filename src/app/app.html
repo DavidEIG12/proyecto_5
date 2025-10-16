@@ -1,5 +1,5 @@
 <h1>Directorio de personas</h1>
-<br><br>
+<br>
 <div class="personas-grid">
   <article class="card" *ngFor="let p of personaArray; index as i">
     <img [src]="p.getRuta()" alt="{{ p.nombre }} {{ p.apellidos }}" loading="lazy" decoding="async">
@@ -8,141 +8,19 @@
     <hr class="divider">
     <p class="edad">{{ p.edad }} años</p>
   </article>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
 </div>
+<br>
+<section class="panel-top">
+  <div class="actions">
+    <button class="btn" (click)="onSubmit()">
+      {{ submitted ? 'Ocultar info' : 'Ver info' }}
+    </button>
+  </div>
+
+  <div *ngIf="submitted" class="info-panel">
+    <h3>Datos del usuario</h3>
+  </div>
+</section>
+
 <router-outlet />
+  
