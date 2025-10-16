@@ -11,12 +11,11 @@ import { Persona } from './persona';
 export class App {
   protected readonly title = signal ('proyecto_5');
 
-   persona: Persona = new Persona ('David', 'García', 21);
+  //  persona: Persona = new Persona ('David', 'García', 21);
 
    personaArray: Persona [] = [
-    new Persona('Ana', 'López', 22),
-    new Persona('Luis', 'Martínez', 23),
-    new Persona('Marta', 'Sánchez', 24),
-    new Persona('Carlos', 'Gómez', 25)
+    new Persona ('David', 'assets/descarga.png', 'García', 21),
+    new Persona ('Ana', 'assets/descarga2.png', 'López', 22),
+    new Persona ('María', 'assets/descarga3.png', 'Martínez', 20)
    ]
 }
