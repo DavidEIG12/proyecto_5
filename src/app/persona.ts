@@ -17,7 +17,7 @@ export class Persona {
         return this.edad;
     }
     getRuta(): string {
-        return this.ruta;
+        return 'assets/' + this.ruta;
     }   
 
     setNombre(nombre:string): void {

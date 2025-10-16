@@ -1,10 +1,9 @@
 <h2>Lista de Personas</h2>
-  <ul>
-  <li *ngFor="let persona of personaArray; let i = index">
-    <strong>{{ i + 1 }}. {{ persona.nombre }}</strong> <br>
-    Apellidos: {{ persona.apellido }} <br>
-    Edad {{ persona.edad }}
-    <hr>
-  </li>
-  </ul>
+<div *ngFor="let p of personaArray">
+  <img [src]="p.getRuta()" width="300px" height="300px">
+  <p>{{p.nombre}}</p>
+  <p>{{p.apellidos}}</p>
+  <p>{{p.edad}}</p>
+  <hr>
+</div>
 <router-outlet />
